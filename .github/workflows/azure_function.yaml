@@ -24,9 +24,10 @@ jobs:
       - name: 'Deploy to Azure Functions'
         uses: azure/functions-action@v1
         with:
-          app-name: '4request' # Ensure this app exists as a PYTHON app in Azure
+          app-name: '4request'
           package: '.'
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true
+          # ADD THIS LINE BELOW:
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }} 
         env:
+          # You can keep this, but the line above is what the action actually uses
           AZURE_FUNCTIONAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
