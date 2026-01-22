@@ -3,7 +3,7 @@ name: Deploy Node.js Azure Function
 on:
   push:
     branches:
-      - ["main", "dev"] # Change this if your branch is named differently (e.g., 'master')
+      - dev # Change this if your branch is named differently (e.g., 'master')
 
 env:
   AZURE_FUNCTIONAPP_NAME: '4request'   # Your actual Azure Function App name
