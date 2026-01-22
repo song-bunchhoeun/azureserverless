@@ -1,2 +1,0 @@
-# azureserverless
-Azure Function
