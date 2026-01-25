@@ -12,7 +12,7 @@ app.http('funcdemo', {
     }
 });
 
-app.http('funcdemo1', {
+app.http('funcdemo2', {
     methods: ['GET', 'POST'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
@@ -23,3 +23,4 @@ app.http('funcdemo1', {
         return { body: `Hello, ${name}!` };
     }
 });
+
